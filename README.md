@@ -35,8 +35,8 @@ gradebook/
 Clone the repository:
 
 ```bash
-git clone <your-repository-url>
-cd gradebook
+git clone https://github.com/Monika63043/Gradebook-CLI.git
+cd Gradebook-CLI
 ```
 
 Create and activate a virtual environment:
