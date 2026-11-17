@@ -2,7 +2,7 @@ from .models import Student, Course, Enrollment
 from .storage import load_data, save_data
 
 def add_student(name):
-    data = load_data
+    data = load_data()
     student_id = max(
         [student["id"] for student in data["students"]],
         default =0
