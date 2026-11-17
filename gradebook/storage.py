@@ -13,7 +13,7 @@ def load_data(path = DEFAULT_PATH):
     except FileNotFoundError:
         logger.info("No file found")
         return {"students": [], "courses": [], "enrollments": []}
-    except json.JSONDecoderError:
+    except json.JSONDecodeError:
         logger.error("Corrupt JSON in %s", path)
         print("The data file is damaged, Fix or delete it")
         raise
