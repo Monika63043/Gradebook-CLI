@@ -89,7 +89,8 @@ def add_grade(student_id, course_code, grade):
     if enrollment is None:
         raise ValueError("Student is not enrolled in this course")
 
-    if not isinstance(grade, (int, float)) or not 0 <= grade <= 100:
+    if (
+        isinstance(grade, bool) or not isinstance(grade, (int, float)) or not 0 <= grade <= 100):
         raise ValueError("Grade must be between 0 and 100")
 
     enrollment["grades"].append(grade)
