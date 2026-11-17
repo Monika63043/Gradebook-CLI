@@ -2,6 +2,9 @@ class Student:
     def __init__(self,id,name):
         if not isinstance(name,str) or not name.strip():
             raise ValueError("Name must be a non-empty string")
+
+        if isinstance(id, bool) or not isinstance(id, int) or id<=0:
+            raise ValueError("Student ID must be a positive integer")
         
         self.id = id
         self.name = name.strip()
